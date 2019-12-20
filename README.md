@@ -9,6 +9,17 @@ solve. Unlike other coding sites that focus on sorting a linked list, real code
 problems present coding challenges that could help you build a demonstratable
 product.
 
+## Challenges
+
+a first challenge has been built here
+https://github.com/saramic/real-code-challenge-blog with a demo implementation
+https://github.com/saramic/real-code-submissions-blog. Now challenges are being
+put in the directory `/challenges`.
+
+**Challenges**
+
+- challenges/challenge-link-shortner
+
 ## Details
 
 - find a problem - assuming web app solutions

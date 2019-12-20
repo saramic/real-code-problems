@@ -20,6 +20,13 @@ put in the directory `/challenges`.
 
 - challenges/challenge-link-shortner
 
+**zip up a challenge**
+
+```
+cd challenges/challenge-link-shortner
+zip -r ../challenge-link-shortner.zip .
+```
+
 ## Details
 
 - find a problem - assuming web app solutions

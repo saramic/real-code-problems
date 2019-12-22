@@ -18,13 +18,24 @@ put in the directory `/challenges`.
 
 **Challenges**
 
+- challenges/introduction
 - challenges/challenge-link-shortner
 
-**zip up a challenge**
+**Run Intorudction**
+
+Run the introduction challenge through it's paces
 
 ```
-cd challenges/challenge-link-shortner
-zip -r ../challenge-link-shortner.zip .
+cd challenges/introduction
+make demo
+```
+
+**zip up all challenges**
+
+to make them ready for upload to the runner platform.
+
+```
+make zip_c
 ```
 
 ## Details

@@ -11,6 +11,7 @@ gem "rspec-wait"
 gem "capybara"
 gem "capybara-inline-screenshot"
 gem "selenium-webdriver"
+gem "thin"
 gem "webdrivers"
 
 gem "pry"

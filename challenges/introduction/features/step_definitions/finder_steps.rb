@@ -3,21 +3,18 @@ Then("it has a {string} with the text {string}") do |tag, text_contents|
   custom_error = [
     "",
     "expected to find #{tag.inspect} in",
-    @doc.to_html,
+    page.body,
     "but didn't find it",
     "",
   ].join("\n\n")
 
   wait_for do
-    @doc.xpath("//#{tag.downcase}").length
+    page.find_all(tag).length
   end.to eq(1), custom_error
 
   wait_for do
-    @doc.xpath("//#{tag.downcase}").text
+    page.find(tag).text
   end.to eq text_contents
-
-  # TODO: capybara equivalent
-  # wait_for { page.find(tag).text }.to eq text_contents
 end
 
 Then("the following elements with text") do |table|
@@ -28,18 +25,10 @@ Then("the following elements with text") do |table|
   end
   assertions.map do |assertion|
     wait_for do
-      @doc.xpath("//#{assertion['tag'].downcase}").length
+      page.find_all(assertion["tag"]).length
     end.to eq 1
     wait_for do
-      @doc.xpath("//#{assertion['tag'].downcase}")
-          .text
-          .gsub(/\s+/, " ")
-          .strip
+      page.find(assertion["tag"]).text
     end.to eq assertion["text"]
-    #
-    # TODO: capybara equivalent
-    # wait_for do
-    #   page.find(assertion["tag"]).text
-    # end.to eq assertion["text"]
   end
 end

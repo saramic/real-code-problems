@@ -11,6 +11,9 @@ make demo
 
 # a sort of build using passing solution
 ENTRY_POINT=solutions/index_5.html make build
+
+# OR run via docker
+docker-compose run --rm -e ENTRY_POINT=solutions/index_5.html features > tmp_output.txt
 ```
 
 

@@ -38,6 +38,16 @@ to make them ready for upload to the runner platform.
 make zip_c
 ```
 
+**Run via docker**
+
+```
+cd challenges/introduction
+docker-compose run --rm -e ENTRY_POINT=solutions/index_5.html features
+
+# or to capture output
+docker-compose run --rm -e ENTRY_POINT=solutions/index_5.html features > tmp_output.txt
+```
+
 ## Details
 
 - find a problem - assuming web app solutions
